@@ -25,14 +25,23 @@ class BMI:
         return round(weight / (height ** 2), 1)
 
 if __name__ == "__main__":
+
+    print("")
+    print("Body Mass Index Chart:")
+    print("< 18.5 = Underweight")
+    print("18.5 - 24.9 = Normal")
+    print("25 - 29.9 = Overweight")
+    print("30 > = Obese")
+    print("")
+
     try:
-        height = int(input("Height (Meters): "))
-        weight = int(input("Weight (Kilograms): "))
-    except:
-        print("Something went wrong! Oops, try again later")
+        height = float(input("Height (Meters): "))
+        weight = float(input("Weight (Kilograms): "))
+    except Exception as e:
+        print("\n\nSomething went wrong! Oops, try again later\n\nError: {}".format(e))
         sys.exit()
 
     bmi = BMI.calculate(height, weight)
     judge = BMI.judge(bmi)
 
-    print("your bmi is {}, you're {}".format(bmi, judge))
+    print("BMI (Body Mass Index) is {} = {}".format(bmi, judge))
