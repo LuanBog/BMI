@@ -8,14 +8,16 @@ class BMI:
     
     @staticmethod
     def judge(bmi):
-        if bmi < 18.5:
-            return "underweight"
-        elif bmi >= 18.5 and bmi <= 24.9:
-            return "normal"
-        elif bmi >= 25 and bmi <= 29.9:
-            return "overweight"
-        elif bmi >= 30:
-            return "obese"
+        # if bmi < 18.5:
+        #     return "underweight"
+        # elif bmi >= 18.5 and bmi <= 24.9:
+        #     return "normal"
+        # elif bmi >= 25 and bmi <= 29.9:
+        #     return "overweight"
+        # elif bmi >= 30:
+        #     return "obese"
+
+        return "underweight" if bmi < 18.5 else "normal" if bmi >= 18.5 and bmi <= 24.9 else "overweight" if bmi >= 25 and bmi <= 29.9 else "obese"
 
     @staticmethod
     def calculate(height, weight):
